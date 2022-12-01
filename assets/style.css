@@ -144,7 +144,15 @@ letter-spacing: 1px;
     flex-direction: row;
     flex-wrap: nowrap;
     overflow: hidden;
-    
+    align-items: center;
+    position: relative;
+}
+.copertura-monitor h2 {
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50% , -50%);
+   z-index: 9999;
 }
 .copertura-monitor {
     position: relative;
@@ -153,11 +161,17 @@ letter-spacing: 1px;
     
     
 }
-.monitor img {
+.monitor  img {
     width: 100%;
     border: 1px solid #474747;
     border-radius: 5px;
    
+}
+.img-slid {
+    min-width: 348px!important;
+    min-height: 200px!important;
+    
+    padding: 20px;
 }
 
 
@@ -179,6 +193,14 @@ letter-spacing: 1px;
     border-radius: 50%;
     margin-bottom: 5px;
 }
+.luce-verde {
+    width: 15px;
+    height: 15px;
+    background: #00e60b;
+    box-shadow: inset 2px 2px 2px rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    margin-bottom: 5px;
+}
 .font-small {
     font-size: 12px;
 }
@@ -189,23 +211,34 @@ letter-spacing: 1px;
     margin-bottom: 15px;
 }
 .container-on-of {
-    width: 70px;
+    width: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: rgb(255, 255, 255);
     border-radius: 8px;
     box-shadow: inset 1px 2px 2px rgba(0, 0, 0, 0.25);
-    padding: 4px 0px;
+    padding: 4px 4px;
 }
 .on,
 .off {
-    width:50%;
+    width:30px;
+
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 13px;
     cursor: pointer;
+    
+
+
+
+}
+.attivo {
+    background: #D9D9D9;
+    color: rgb(44, 44, 44);
+    border-radius: 30px;
+    box-shadow: -1px 2.5px 1px rgba(0, 0, 0, 0.5);
 }
 
 
@@ -510,11 +543,31 @@ transition: all 0.25s;
     z-index: 10;
     background: transparent url('img/noise.png') 0 0;
     background-size:300px 200px;
+    
     opacity: .25;
     animation: noise 0.6s steps(8,end) infinite both;
     box-shadow: -4px 2px 4px rgba(0, 0, 0, 0.65), inset 0px 3px 8px rgba(255, 255, 255, 0.95), inset 5px 6px 6px rgba(0, 0, 0, 0.4);
       
 }
+.abs-ombra-off {
+    position: absolute;
+    top: -40px;
+    left: -40px;
+    width: 160%;
+    height: 160%;
+    
+    z-index: 10;
+    background: transparent url('img/mana.gif') 0 0;
+    background-size:100px 100px;
+    
+    opacity: .25;
+    
+   
+      
+}
+
+
+
 
 
 .griglia-audio {
@@ -535,6 +588,50 @@ box-shadow: inset -3px 8px 4px rgba(40, 40, 40, 0.8), inset 0px 5px 9px rgba(0, 
     margin-right: 12px;
 }
 
+.slide1 {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.box-tasti {
+   
+    margin-top: 25px;
+    z-index: 9999;
+}
+
+.box-tasti a {
+    border: 1px solid #5442C2;
+    border-radius: 20px;
+    padding: 4px 10px; 
+    text-decoration: none;
+    background-color: #E4E5DF;
+    color: #5442C2;
+    font-weight: 600;
+    cursor: pointer;
+    z-index: 9999;
+}
+
+.slide1 p {
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media only screen and (max-width: 1300px) and (min-width: 600px){
     .container-main { 
         width: 100%;
@@ -550,6 +647,15 @@ box-shadow: inset -3px 8px 4px rgba(40, 40, 40, 0.8), inset 0px 5px 9px rgba(0, 
         justify-content: center;
     }
 }
+
+
+
+
+
+
+
+
+
 @media only screen and (max-width: 599px){
     .container-main { 
         width: 100%;
@@ -571,13 +677,13 @@ box-shadow: inset -3px 8px 4px rgba(40, 40, 40, 0.8), inset 0px 5px 9px rgba(0, 
         padding: 8px 20px 100px;
         box-shadow: 0px 6px 70px #000000, inset -4px 0px 15px rgba(0, 0, 0, 0.65), inset 7px 0px 20px rgba(0, 0, 0, 0.80);
         position: relative;
-        display: flex;
+        /* display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: center; */
         
     }
     .riga2 {
-        padding: 20px 15px 0px;
+        padding: 15px 15px 15px;
         position: relative;
         z-index: 12;
     }
@@ -604,14 +710,14 @@ box-shadow: inset -3px 8px 4px rgba(40, 40, 40, 0.8), inset 0px 5px 9px rgba(0, 
     }
     .colonna-70 {
         width: 50%;
-        height: 38px;
+        height: 35px;
     }
     .colonna-30 {
         width: 50%;
     }
     .button-slider {
-        width: 33px;
-    height: 33px;
+        width: 30px;
+    height: 30px;
     }
     #main {
         max-width: 110px;
@@ -663,5 +769,18 @@ box-shadow: inset -3px 8px 4px rgba(40, 40, 40, 0.8), inset 0px 5px 9px rgba(0, 
     display: flex;
     flex-direction: row;
     align-items: center;
+}
+.testo-slide {
+    font-weight: 600;
+    font-size: 13px;
+color: rgba(198, 198, 198, 0.7);
+letter-spacing: 1px;
+}
+
+.img-slid {
+    min-width: 278px!important;
+    min-height: 200px!important;
+   
+    padding: 20px;
 }
 }
