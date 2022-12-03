@@ -24,13 +24,13 @@
                 <div class="game-row2">
                     <div class="base-schermo">
                         <div class="riga1">
-                            <div class="colonna-70">
+                            <!-- <div class="colonna-70">
                                 <div id="main">
-                                    <!-- <img src="assets/img/ico-img.svg" alt=""> -->
+                                    
 
                                     <h4 id="para1" class="para testo-slide">MANA MANA MANA MANA MANA MANA MANA MANA MANA MANA MANA MANA MANA MANA MANA MANA MANA MANA MANA MANA MANA MANA  </h4>
                                 </div>
-                                <!-- <img src="assets/img/ico-grid.svg" alt=""> -->
+                                
                             </div>
                             <div class="colonna-30">
                                 <div class="box-freccia-sx">
@@ -90,30 +90,32 @@
                                         </defs>
                                         </svg> 
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                         <div class="riga2">
                             <div class="copertura-monitor">
                                 <h2 id="testo-iniz">Play Start</h2>
                                 <div id="slider" class="monitor">
-                                   
-                                        <div class="img-slid slide1">
-                                            <p>Noi dipingiamo siti web e<br> aiutiamo il tuo brand a crescere</p>
-                                            <div class="box-tasti">
-                                                <a href="#">CHI SIAMO</a>
-                                                <a href="#">PORTFOLIO</a>
-                                            </div>
+                                
+                                    <div class="img-slid">
+                                        <nav id="blocco-nav-schermata">
+                                            <ul class="navigatore">
+                                                <li name="portfolio">Portfolio</li>
+                                                <li name="services">Services</li>
+                                                <li name="about-us">About us</li>
+                                                <li name="contact">Contact</li>
+                                            </ul>
+                                        </nav>
+                                       
+                                        <div class="schermata-nuova"><!-- div dinamico. ci finiranno le schermate dopo il click sulle voci di menu -->
+                                            <div class="div-back" id="to-back"><p>PRESS B TO BACK</p></div>
+                                            <div id="about-us">ABOUT US</div>
+                                            <div id="contatti">CONTACT</div>
+                                            <div id="servizi">SERVICES</div>
+                                            <div id="portfolio">PORTFOLIO</div>
                                         </div>
-                                        <div class="img-slid ">
-                                            <p>Slide2</p>
-                                        </div>
-                                        <div class="img-slid ">
-                                            <p>Slide3</p>
-                                        </div>
-                                        
-                                      
-                                    
-                                   
+                                    </div>
+                                
                                 </div>
                                 <div id="mana-gif" class="abs-ombra-off">
                                 </div>
@@ -137,7 +139,7 @@
                      <div class="base-cerchio">
                         <div class="row-alta">
                           <div class="cerchio-col1-alta"></div>
-                          <div class="cerchio-col2-alta"></div>
+                          <div id="tasto-freccia-su" class="cerchio-col2-alta"></div>
                           <div class="cerchio-col3-alta"></div>
                         </div>
                         <div class="row-centro">
@@ -149,7 +151,7 @@
                         </div>
                         <div class="row-bassa">
                             <div class="cerchio-col1-bassa"></div>
-                          <div class="cerchio-col2-bassa"></div>
+                          <div id="tasto-freccia-giu" class="cerchio-col2-bassa"></div>
                           <div class="cerchio-col3-bassa"></div>
                         </div>
 
@@ -158,8 +160,8 @@
                     <div class="row4-col2">
                         <div class="container-tasti">
                             <div class="bottoni-rossi">
-                               <div class="tasto-rosso"></div>
-                               <div class="tasto-rosso"></div>
+                               <div id="tasto-rosso-a" class="tasto-rosso"></div>
+                               <div id="tasto-rosso-b" class="tasto-rosso"></div>
                             </div>
                             <div class="lettere-tasti">
                              <p>A</p>
