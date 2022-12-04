@@ -1,4 +1,15 @@
 
+var audioClick = new Audio();
+audioClick.src = 'assets/audio/click.mp3';
+var audioSuGiu = new Audio();
+audioSuGiu.src = 'assets/audio/audio-su-giu.mp3';
+var audioApri = new Audio();
+audioApri.src = 'assets/audio/apri.mp3';
+
+
+console.log(audioClick.src);
+
+
 let sliderGame = document.querySelector('#slider');
 let bottSx = document.querySelector('#bott-sx');
 let bottDx = document.querySelector('#bott-dx');
@@ -72,7 +83,7 @@ let testoIniz = document.querySelector('#testo-iniz');
 
 
 startBasso.addEventListener('click',function(){
-   
+    audioApri.play();
         immagini.removeAttribute('style');
     
     startAlto.classList.add('attivo');
@@ -85,7 +96,7 @@ startBasso.addEventListener('click',function(){
 })
 
 startAlto.addEventListener('click',function(){
-    
+    audioApri.play();
         immagini.removeAttribute('style');
     
     startAlto.classList.add('attivo');
@@ -98,7 +109,7 @@ startAlto.addEventListener('click',function(){
 })
 
 offAlto.addEventListener('click', function(){
-   
+    audioApri.play();
         immagini.style.visibility= 'hidden';
     
     startAlto.classList.remove('attivo');
@@ -127,7 +138,7 @@ let indice = 0;
 
 tastoFrecciaGiu.addEventListener('click', function () {
 
-
+    audioSuGiu.play();
     
     if (indice < vociMenu.length -1 ) {
         for (let i = 0; i < vociMenu.length; i++) {
@@ -142,6 +153,7 @@ tastoFrecciaGiu.addEventListener('click', function () {
 
 
 tastoFrecciaSu.addEventListener('click', function () {
+    audioSuGiu.play();
     if (indice >= 1) {
         for (let i = 0; i < vociMenu.length; i++) {
             vociMenu[i].classList.remove('select');
@@ -192,6 +204,7 @@ toBack.style.display = 'none';
         }
         toBack.removeAttribute('style');
         bloccaNavSchermata.style.display = 'none'; //NASCONDO la prima schermata  (quella del menu)
+        audioClick.play();
      
      })
 
@@ -205,6 +218,7 @@ toBack.style.display = 'none';
 
 
 tastoRossoB.addEventListener('click', function(){
+    audioClick.play();
     paginaAbout.style.display = 'none';
 contatti.style.display = 'none';
 servizi.style.display = 'none';
@@ -213,7 +227,6 @@ portfolio.style.display = 'none';
 bloccaNavSchermata.removeAttribute('style');
 toBack.style.display = 'none';
 })
-
 
 
 
